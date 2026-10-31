@@ -1,0 +1,8 @@
+{
+  "name": "Wedding Video Studio: Royal Indian Card & Invitation Video Maker",
+  "description": "Turn traditional wedding invitation cards into cinematic 9:16 invitation videos with real-time 3D envelope opening, folder reveals, Hindi Devanagari typography, music, and instant MP4 export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,310 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { Project } from './schema.ts';
+
+export const DEFAULT_PROJECT: Project = {
+  version: 1,
+  name: 'हिमांशु एवं काजल - पावन परिणयोत्सव',
+  locale: 'hi',
+  couple: {
+    groom: 'हिमांशु राज',
+    bride: 'काजल कुमारी',
+    groomShort: 'हिमांशु',
+    brideShort: 'काजल',
+  },
+  families: {
+    groom: {
+      honorific: 'चि०',
+      lines: [
+        'सुपौत्रः स्व० रामकृष्ण सिंह',
+        'सुपुत्रः श्री राजीव कुमार एवं श्रीमती रंजुलता सिन्हा',
+        'ग्रा०+पो०- बाँकीपुर मछरियावाँ, थाना- फतुहाँ, जिला- पटना',
+      ],
+    },
+    bride: {
+      honorific: 'आयु०',
+      lines: [
+        'सुपुत्रीः श्री इन्द्रदेव सिंह एवं श्रीमती बॉबी देवी',
+        'धनकी मोड़, अगमकुआँ, पटना',
+      ],
+    },
+  },
+  events: [
+    {
+      id: 'e1',
+      date: '2026-12-09',
+      day: 'बुधवार',
+      title: 'मटकोर एवं मेंहदी',
+      time: null,
+      venue: null,
+      icon: 'mehendi',
+      highlight: true,
+    },
+    {
+      id: 'e2',
+      date: '2026-12-10',
+      day: 'गुरुवार',
+      title: 'मण्डपाच्छादन, पूजा, हल्दी कलश एवं घृतढारी',
+      time: null,
+      venue: null,
+      icon: 'haldi',
+      highlight: true,
+    },
+    {
+      id: 'e3',
+      date: '2026-12-11',
+      day: 'शुक्रवार',
+      title: 'बारात प्रस्थान एवं रात्रि में शुभ विवाह',
+      time: '19:00',
+      from: 'महारानी कॉलोनी, रोड नं०-2, अगमकुआँ, पटना',
+      venue: 'धनकी मोड़, नियर नोवा हॉस्पिटल, अगमकुआँ, पटना',
+      note: 'संध्या 7 बजे बारात प्रस्थान',
+      icon: 'baraat',
+      highlight: true,
+    },
+    {
+      id: 'e4',
+      date: '2026-12-13',
+      day: 'रविवार',
+      title: 'वर-वधू स्वागत समारोह एवं प्रीतिभोज',
+      time: '19:00',
+      venue: 'पटना सिटी क्लब उत्सव हॉल, कमलदह पथ, अखिलेश नगर, अगमकुआँ, पटना',
+      icon: 'reception',
+      highlight: true,
+    },
+  ],
+  copy: {
+    ganesh: '॥ श्री गणेशाय नमः ॥',
+    shloka1: 'मंगलम् भगवान विष्णुः मंगलम् गरुड़ध्वजः ।\nमंगलम् पुण्डरीकाक्षः मंगलाय तनोऽहरिः ॥',
+    shloka2: 'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभः ।\nनिर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥',
+    welcome1: 'आप सभी के आशीर्वाद और शुभकामनाओं के साथ…',
+    welcome2: 'हम आपको सादर आमंत्रित करते हैं',
+    title: '॥ पावन परिणयोत्सव ॥',
+    invitation: 'के शुभ अवसर पर आप सपरिवार सम्मिलित होकर अपना आशीर्वाद वर-वधू को प्रदान कर हमें अनुगृहीत करें।',
+    seen: 'दर्शनाभिलाषी: समस्त परिवार',
+    wellwishers: 'आकांक्षी: श्री राजीव कुमार, श्रीमती रंजुलता सिन्हा, सुधांश रंजन',
+    closing: 'आपके आशीर्वाद एवं स्नेह के बिना हमारी खुशियाँ अधूरी हैं',
+    couplet: 'सौभाग्य हमारा तब होगा जब दर्शन आपका पाएंगे।\nहृदय कमल खिल जाएगा जब द्वार पर मेरे आएंगे।',
+    toBeInformedText: 'समय एवं स्थान की सूचना शीघ्र दी जाएगी',
+  },
+  guest: {
+    id: 'g-default',
+    name: 'श्रीमान् / श्रीमती',
+    salutation: 'सेवा में,',
+    family: true,
+  },
+  guestList: [
+    { id: 'g1', name: 'श्री राजेश कुमार शर्मा एवं परिवार', salutation: 'सेवा में,' },
+    { id: 'g2', name: 'डॉ० अशोक वर्मा सपरिवार', salutation: 'आदरणीय' },
+    { id: 'g3', name: 'श्री अजय सिंह जी', salutation: 'सेवा में,' },
+    { id: 'g4', name: 'श्रीमती एवं श्री संजय गुप्ता', salutation: 'सादर सप्रेम' },
+  ],
+  theme: {
+    palette: {
+      primary: '#6E1F34', // Maroon
+      secondary: '#4A1224', // Deep Maroon
+      gold: '#C9A24B', // Antique Gold
+      lightGold: '#E8D08A', // Pale Gold
+      cream: '#FBF3DC', // Royal Cream
+      blush: '#F4E1E0', // Blush
+      green: '#3D5A40', // Regal Forest Green matching Card 1
+    },
+    fontDevanagari: "'Noto Serif Devanagari', 'Tiro Devanagari Hindi', serif",
+    fontEnglish: "'Cormorant Garamond', 'Cinzel Decorative', serif",
+    motionIntensity: 1.0,
+    enablePetals: true,
+    enableGoldShimmer: true,
+  },
+  cards: {
+    card1: {
+      mode: 'photo',
+      paperColor: '#d6e2cf', // pale sage green matching real card 1
+      textColor: '#541525',
+      accentColor: '#c9a24b',
+      hotspots: [
+        { id: 'h1_ganesh', label: 'गणेश श्लोक', x: 0.35, y: 0.08, width: 0.3, height: 0.1 },
+        { id: 'h1_groom', label: 'वर पक्ष (हिमांशु राज)', x: 0.15, y: 0.22, width: 0.35, height: 0.2 },
+        { id: 'h1_bride', label: 'वधू पक्ष (काजल कुमारी)', x: 0.55, y: 0.28, width: 0.38, height: 0.18 },
+        { id: 'h1_title', label: 'पावन परिणयोत्सव', x: 0.3, y: 0.48, width: 0.4, height: 0.12 },
+        { id: 'h1_names', label: 'दर्शनाभिलाषी एवं आकांक्षी', x: 0.1, y: 0.72, width: 0.8, height: 0.2 },
+      ],
+    },
+    card2: {
+      mode: 'photo',
+      paperColor: '#fbf3dc', // cream card 2
+      textColor: '#541525',
+      accentColor: '#c9a24b',
+      hotspots: [
+        { id: 'h2_shloka', label: 'मांगलिक श्लोक व दोहा', x: 0.3, y: 0.08, width: 0.4, height: 0.15 },
+        { id: 'h2_events', label: 'मांगलिक कार्यक्रम (चार रस्में)', x: 0.25, y: 0.25, width: 0.5, height: 0.22 },
+        { id: 'h2_reception', label: 'वर-वधू स्वागत स्थल', x: 0.28, y: 0.48, width: 0.44, height: 0.15 },
+        { id: 'h2_baraat', label: 'बारात प्रस्थान नोट', x: 0.15, y: 0.65, width: 0.7, height: 0.12 },
+      ],
+    },
+  },
+  assets: {
+    envelopeFront: {
+      slotId: 'envelopeFront',
+      name: 'Envelope Front Photo',
+      url: '/assets/aistudio/IMG-20261101-WA0001_a331d871.jpg',
+    },
+    envelopeBack: {
+      slotId: 'envelopeBack',
+      name: 'Envelope Back',
+      url: '/assets/aistudio/IMG-20261101-WA0001_a331d871.jpg',
+    },
+    envelopeFlap: {
+      slotId: 'envelopeFlap',
+      name: 'Envelope Flap',
+      url: '/assets/aistudio/IMG-20261101-WA0001_a331d871.jpg',
+    },
+    folderCover: {
+      slotId: 'folderCover',
+      name: 'Folder Doors (Groom & Bride Royal)',
+      url: '/assets/aistudio/IMG-20261101-WA0008_fbb19675.jpg',
+    },
+    folderInside: {
+      slotId: 'folderInside',
+      name: 'Folder Inside Procession',
+      url: '/assets/aistudio/IMG-20261101-WA0007_aa3c7068.jpg',
+    },
+    card1: {
+      slotId: 'card1',
+      name: 'Card 1 (Couple & Families)',
+      url: '/assets/aistudio/IMG-20261101-WA0005_b86412fe.jpg',
+    },
+    card2: {
+      slotId: 'card2',
+      name: 'Card 2 (Ceremonies & Venues)',
+      url: '/assets/aistudio/IMG-20261101-WA0006_21289331.jpg',
+    },
+    groomFigure: null,
+    brideFigure: null,
+    musicTrack: null,
+  },
+  scenes: [
+    {
+      id: 'welcome',
+      title: 'Welcome & Ganesh Shloka',
+      titleHi: 'शुभ स्वागतम् एवं गणेश वंदना',
+      start: 0,
+      duration: 6,
+      enabled: true,
+      params: { showEmblem: true, staggerWords: true },
+    },
+    {
+      id: 'envelopeGate',
+      title: 'Envelope Gate & Pen Reveal',
+      titleHi: 'लिफ़ाफ़ा एवं ' + 'सेवा में ' + 'अंकन',
+      start: 6,
+      duration: 5,
+      enabled: true,
+      params: { goldSweep: true, penSpeed: 1.0 },
+    },
+    {
+      id: 'envelopeOpen',
+      title: 'Envelope Flap Opens (3D)',
+      titleHi: 'लिफ़ाफ़ा उद्घाटन',
+      start: 11,
+      duration: 5,
+      enabled: true,
+      params: { hingeAngle: 180, innerGlow: true },
+    },
+    {
+      id: 'folderRise',
+      title: 'Folder Rises',
+      titleHi: 'शाही फोल्डर आगमन',
+      start: 16,
+      duration: 5,
+      enabled: true,
+      params: { riseDistance: 1.2, envelopeFade: true },
+    },
+    {
+      id: 'folderDoors',
+      title: 'Folder Doors Swing Open (110°)',
+      titleHi: 'द्वार उद्घाटन (वर-वधू झांकी)',
+      start: 21,
+      duration: 5,
+      enabled: true,
+      params: { doorSwingAngle: 115, showSparkles: true },
+    },
+    {
+      id: 'cardReveal',
+      title: 'Card 1: Couple & Families',
+      titleHi: 'प्रथम पत्र: वर-वधू एवं परिवार परिचय',
+      start: 26,
+      duration: 12,
+      enabled: true,
+      params: { spotlightSequence: true, centerNamesDuration: 2.5 },
+    },
+    {
+      id: 'cardSwap',
+      title: 'Card Swap / Flip Page',
+      titleHi: 'पत्र परिवर्तन',
+      start: 38,
+      duration: 4,
+      enabled: true,
+      params: { flipStyle: 'slideAndCurl' },
+    },
+    {
+      id: 'eventHighlight',
+      title: 'Event Highlights & Route',
+      titleHi: 'मांगलिक कार्यक्रम व बारात मार्ग',
+      start: 42,
+      duration: 18,
+      enabled: true,
+      params: { showMapRoute: true, venuePinGlow: true },
+    },
+    {
+      id: 'foldAndPack',
+      title: 'Fold & Pack (Reverse 3D)',
+      titleHi: 'शाही संपुट व स्वर्ण मुहर',
+      start: 60,
+      duration: 6,
+      enabled: true,
+      params: { showGoldSeal: true },
+    },
+    {
+      id: 'blessingFinale',
+      title: 'Blessing Finale & Charan-Sparsh',
+      titleHi: 'आशीर्वाद समारोह व चरण-स्पर्श',
+      start: 66,
+      duration: 9,
+      enabled: true,
+      params: { petalShower: true, bowGesture: true },
+    },
+  ],
+  audio: {
+    musicType: 'procedural',
+    volume: 0.85,
+    fadeIn: 1.5,
+    fadeOut: 2.0,
+    soundEffects: true,
+  },
+  export: {
+    resolution: '1080x1920',
+    fps: 30,
+    format: 'mp4',
+    preset: 'standard',
+    bitrateKbps: 7800,
+    includeAudio: true,
+  },
+  proofApprovals: {
+    ganesh: true,
+    shloka1: true,
+    shloka2: true,
+    welcome1: true,
+    welcome2: true,
+    groom: true,
+    bride: true,
+    groomFamily: true,
+    brideFamily: true,
+    title: true,
+    invitation: true,
+    events: true,
+    closing: true,
+  },
+};
